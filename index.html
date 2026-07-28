@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mero — Садовая мебель премиум-класса из бруса</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪑</text></svg>">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header" id="header">
+    <div class="container header__inner">
+        <a href="#" class="logo">Mero</a>
+        <nav class="nav">
+            <a href="#catalog">Каталог</a>
+            <a href="#about">О нас</a>
+            <a href="#delivery">Доставка</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <div class="header__right">
+            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+            <a href="#" class="header__cart" aria-label="Корзина">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4b98c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container hero__inner">
+            <h1 class="hero__title">Садовая мебель из бруса<br><span class="hero__title--accent">премиум-класса</span></h1>
+            <p class="hero__subtitle">Ручная работа из натурального бруса</p>
+            <p class="hero__tagline">Элитная мебель для террас, бассейнов и садов.<br>Гарантия, доставка по России, кредитование.</p>
+            
+            <!-- Иконки -->
+            <div class="hero__features">
+                <div class="hero__features-col">
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#887c72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                        </div>
+                        <div class="feature__text">
+                            <span class="feature__title">Гарантия</span>
+                            <span class="feature__desc">На всю продукцию</span>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#887c72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <div class="feature__text">
+                            <span class="feature__title">Рассрочка</span>
+                            <span class="feature__desc">Т-Банк</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__features-col">
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#887c72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <div class="feature__text">
+                            <span class="feature__title">Доставка</span>
+                            <span class="feature__desc">По всей России</span>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#887c72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                            </svg>
+                        </div>
+                        <div class="feature__text">
+                            <span class="feature__title">Для дома и бизнеса</span>
+                            <span class="feature__desc">Создаём уют и комфорт</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <!-- Кнопки -->
+            <div class="hero__actions">
+                <a href="#" class="btn btn--hero-secondary">Подбор мебели ></a>
+                <a href="#catalog" class="btn btn--hero-primary">Смотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Каталог</h2>
+            <div class="catalog__scroll">
+                <div class="catalog__track">
+                <!-- Кресло -->
+                <div class="card">
+                    <div class="card__image" data-gallery="chair">
+                        <img src="ck1.png" alt="Кресло Mero">
+                        <div class="card__zoom">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        <line x1="8" y1="11" x2="14" y2="11"/>
+        <line x1="11" y1="8" x2="11" y2="14"/>
+    </svg>
+</div>
+                    </div>
+                    <div class="card__info">
+                        <h3>Кресло садовое</h3>
+                        <p>Удобное кресло для отдыха. Натуральное дерево.</p>
+                    </div>
+                    <div class="card__price">14 990 ₽</div>
+                    <button class="btn btn--primary btn--full open-modal">Заказать</button>
+                </div>
+                <!-- Диван -->
+                <div class="card">
+                    <div class="card__image" data-gallery="sofa">
+                        <img src="https://placehold.co/500x400/2e3d50/ffd540?text=Диван+Mero" alt="Диван Mero">
+                        <div class="card__zoom">🔍</div>
+                    </div>
+                    <div class="card__info">
+                        <h3>Диван садовый</h3>
+                        <p>Двухместный диван для уютных вечеров.</p>
+                    </div>
+                    <div class="card__price">28 990 ₽</div>
+                    <button class="btn btn--primary btn--full open-modal">Заказать</button>
+                </div>
+                <!-- Стол -->
+                <div class="card">
+                    <div class="card__image" data-gallery="table">
+                        <img src="https://placehold.co/500x400/2e3d50/ffd540?text=Стол+Mero" alt="Стол Mero">
+                        <div class="card__zoom">🔍</div>
+                    </div>
+                    <div class="card__info">
+                        <h3>Стол садовый</h3>
+                        <p>Большой стол для всей семьи.</p>
+                    </div>
+                    <div class="card__price">11 990 ₽</div>
+                    <button class="btn btn--primary btn--full open-modal">Заказать</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают Mero</h2>
+            <div class="about__grid">
+                <div class="about__item">
+                    <div class="about__icon">🪵</div>
+                    <h3>Натуральные материалы</h3>
+                    <p>Отборный брус камерной сушки</p>
+                </div>
+                <div class="about__item">
+                    <div class="about__icon">🔧</div>
+                    <h3>Ручная работа</h3>
+                    <p>Каждое изделие создаётся мастером</p>
+                </div>
+                <div class="about__item">
+                    <div class="about__icon">📐</div>
+                    <h3>Точный расчёт</h3>
+                    <p>Оптимальный раскрой без отходов</p>
+                </div>
+                <div class="about__item">
+                    <div class="about__icon">🛡️</div>
+                    <h3>Гарантия 2 года</h3>
+                    <p>Уверены в качестве</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Доставка -->
+    <section class="delivery" id="delivery">
+        <div class="container">
+            <h2 class="section-title">Доставка и оплата</h2>
+            <div class="delivery__grid">
+                <div class="delivery__item">
+                    <div class="delivery__icon">🚚</div>
+                    <h3>Доставка</h3>
+                    <p>Бесплатно по городу. В область — по договорённости.</p>
+                </div>
+                <div class="delivery__item">
+                    <div class="delivery__icon">💳</div>
+                    <h3>Оплата</h3>
+                    <p>Наличные, перевод на карту, QR-код.</p>
+                </div>
+                <div class="delivery__item">
+                    <div class="delivery__icon">📅</div>
+                    <h3>Сроки</h3>
+                    <p>Изготовление 3–7 дней. Доставка на следующий день.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts__grid">
+                <a href="tel:+79991234567" class="contacts__item">
+                    <span>📞</span> +7 (999) 123-45-67
+                </a>
+                <a href="mailto:info@mero-furniture.ru" class="contacts__item">
+                    <span>✉️</span> info@mero-furniture.ru
+                </a>
+                <a href="#" class="contacts__item">
+                    <span>📍</span> г. Москва, ул. Производственная, 10
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <a href="#" class="logo">Mero</a>
+            <div class="footer__links">
+                <a href="#catalog">Каталог</a>
+                <a href="#about">О нас</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор оферты</a>
+            </div>
+            <div class="footer__social">
+                <a href="#" aria-label="WhatsApp">💬</a>
+                <a href="#" aria-label="Telegram">📱</a>
+                <a href="#" aria-label="Instagram">📷</a>
+            </div>
+        </div>
+        <p class="footer__copy">© 2025 Mero</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <h3>Оставить заявку</h3>
+                <form id="orderForm" action="https://formspree.io/f/xeeynkab" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <textarea name="message" placeholder="Сообщение (необязательно)" rows="3"></textarea>
+                <button type="submit" class="btn btn--primary btn--full">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Кнопка наверх (появляется при скролле) -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"/>
+            <polyline points="5 12 12 5 19 12"/>
+        </svg>
+    </button>
+
+           <!-- Круглая кнопка заявки (всегда видна) -->
+    <button class="floating-bubble open-modal" aria-label="Заявка">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5" r="1.5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="19" r="1.5"/>
+        </svg>
+    </button>
+
+    <script>
+        // Модальное окно
+        const modal = document.getElementById('modal');
+        const openBtns = document.querySelectorAll('.open-modal');
+        const closeBtn = document.querySelector('.modal__close');
+
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('modal--open');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('modal--open');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('modal--open');
+        });
+
+        // Кнопка наверх
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
+        });
+        scrollTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
+    <script>
+        // Анимация появления при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .about__item, .delivery__item, .review').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Лайтбокс -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox__close">&times;</span>
+        <button class="lightbox__prev">‹</button>
+        <button class="lightbox__next">›</button>
+        <img src="" alt="" id="lightbox__image">
+    </div>
+
+    <script>
+        // Лайтбокс с перелистыванием
+        const galleries = {
+            chair: ['ck1.png', 'https://placehold.co/800x600/2e3d50/ffd540?text=Кресло+2', 'https://placehold.co/800x600/2e3d50/ffd540?text=Кресло+3'],
+            sofa: ['https://placehold.co/800x600/2e3d50/ffd540?text=Диван+1', 'https://placehold.co/800x600/2e3d50/ffd540?text=Диван+2'],
+            table: ['https://placehold.co/800x600/2e3d50/ffd540?text=Стол+1', 'https://placehold.co/800x600/2e3d50/ffd540?text=Стол+2'],
+        };
+
+        let currentGallery = [];
+        let currentIndex = 0;
+        const lightboxEl = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox__image');
+        const prevBtn = document.querySelector('.lightbox__prev');
+        const nextBtn = document.querySelector('.lightbox__next');
+        const closeLightbox = document.querySelector('.lightbox__close');
+
+        document.querySelectorAll('.card__image').forEach(el => {
+            el.addEventListener('click', () => {
+                const gallery = el.dataset.gallery;
+                currentGallery = galleries[gallery] || [];
+                currentIndex = 0;
+                if (currentGallery.length > 0) {
+                    lightboxImg.src = currentGallery[0];
+                    lightboxEl.classList.add('lightbox--open');
+                }
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+            lightboxImg.src = currentGallery[currentIndex];
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % currentGallery.length;
+            lightboxImg.src = currentGallery[currentIndex];
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightboxEl.classList.remove('lightbox--open');
+        });
+
+        lightboxEl.addEventListener('click', (e) => {
+            if (e.target === lightboxEl) lightboxEl.classList.remove('lightbox--open');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxEl.classList.contains('lightbox--open')) return;
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+            if (e.key === 'Escape') lightboxEl.classList.remove('lightbox--open');
+        });
+    </script>
+
+    <!-- Форма подбора мебели -->
+    <div class="quiz-overlay" id="quizOverlay">
+        <div class="quiz-modal">
+            <button class="quiz-close" id="quizClose">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#a8998d" stroke-width="1"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            
+            <h3 class="quiz-title">Подбор мебели</h3>
+            <p class="quiz-step" id="quizStep">Вопрос <span id="currentStep">1</span> из 5</p>
+            <div class="quiz-progress"><div class="quiz-progress__bar" id="progressBar" style="width: 16%"></div></div>
+            
+            <!-- Страница 1 -->
+            <div class="quiz-page active" data-page="1" id="page1">
+                <p class="quiz-question">1. Где будете пользоваться мебелью? <span class="quiz-required">*</span></p>
+                <div class="quiz-options">
+                    <label class="quiz-option" onclick="selectOption(this, 'q1')">
+                        <input type="radio" name="q1" value="home"><span class="quiz-radio"></span><span class="quiz-label">В доме</span>
+                    </label>
+                    <label class="quiz-option" onclick="selectOption(this, 'q1')">
+                        <input type="radio" name="q1" value="outside"><span class="quiz-radio"></span><span class="quiz-label">На улице</span>
+                    </label>
+                </div>
+                <p class="quiz-error" id="error1">Выберите один из вариантов</p>
+            </div>
+            
+            <!-- Страница 2 -->
+            <div class="quiz-page" data-page="2" id="page2">
+                <p class="quiz-question">2. Какая мебель Вас интересует? <span class="quiz-required">*</span></p>
+                <div class="quiz-options">
+                    <label class="quiz-option" onclick="selectOption(this, 'q2')">
+                        <input type="radio" name="q2" value="chair"><span class="quiz-radio"></span><span class="quiz-label">Кресло</span>
+                    </label>
+                    <label class="quiz-option" onclick="selectOption(this, 'q2')">
+                        <input type="radio" name="q2" value="sofa"><span class="quiz-radio"></span><span class="quiz-label">Диван</span>
+                    </label>
+                    <label class="quiz-option" onclick="selectOption(this, 'q2')">
+                        <input type="radio" name="q2" value="table"><span class="quiz-radio"></span><span class="quiz-label">Стол</span>
+                    </label>
+                    <label class="quiz-option" onclick="selectOption(this, 'q2')">
+                        <input type="radio" name="q2" value="set"><span class="quiz-radio"></span><span class="quiz-label">Комплект</span>
+                    </label>
+                </div>
+                <p class="quiz-error" id="error2">Выберите один из вариантов</p>
+            </div>
+            
+            <!-- Страница 3 -->
+            <div class="quiz-page" data-page="3" id="page3">
+                <p class="quiz-question">3. Нужна ли водоотталкивающая ткань? <span class="quiz-required">*</span></p>
+                <div class="quiz-options quiz-options--row">
+                    <label class="quiz-option" onclick="selectOption(this, 'q3')">
+                        <input type="radio" name="q3" value="yes"><span class="quiz-radio"></span><span class="quiz-label">Да</span>
+                    </label>
+                    <label class="quiz-option" onclick="selectOption(this, 'q3')">
+                        <input type="radio" name="q3" value="no"><span class="quiz-radio"></span><span class="quiz-label">Нет</span>
+                    </label>
+                </div>
+                <p class="quiz-error" id="error3">Выберите один из вариантов</p>
+            </div>
+            
+            <!-- Страница 4 -->
+            <div class="quiz-page" data-page="4" id="page4">
+                <p class="quiz-question">4. Нужна ли вам рассрочка? <span class="quiz-required">*</span></p>
+                <div class="quiz-options quiz-options--row">
+                    <label class="quiz-option" onclick="selectOption(this, 'q4')">
+                        <input type="radio" name="q4" value="yes"><span class="quiz-radio"></span><span class="quiz-label">Да</span>
+                    </label>
+                    <label class="quiz-option" onclick="selectOption(this, 'q4')">
+                        <input type="radio" name="q4" value="no"><span class="quiz-radio"></span><span class="quiz-label">Нет</span>
+                    </label>
+                </div>
+                <p class="quiz-error" id="error4">Выберите один из вариантов</p>
+            </div>
+            
+            <!-- Страница 5 -->
+            <div class="quiz-page" data-page="5" id="page5">
+                <p class="quiz-question">5. Ваши контакты <span class="quiz-required">*</span></p>
+                <div class="quiz-form-row">
+                    <div class="quiz-input-group">
+                        <label class="quiz-input-label">Имя</label>
+                        <input type="text" class="quiz-input" placeholder="Ваше имя" id="quizName">
+                    </div>
+                    <div class="quiz-input-group">
+                        <label class="quiz-input-label">Телефон</label>
+                        <input type="tel" class="quiz-input" placeholder="+7 (___) ___-__-__" id="quizPhone" value="+7 (___) ___-__-__">
+                    </div>
+                </div>
+                <label class="quiz-check" onclick="this.classList.toggle('checked')">
+                    <span class="quiz-check__box"></span>
+                    <span class="quiz-check__text">Нажимая кнопку «Отправить», я даю согласие на обработку моих <a href="#" class="quiz-link">персональных данных</a> и ознакомлен(а) с <a href="#" class="quiz-link">политикой конфиденциальности</a>. <span class="quiz-required">*</span></span>
+                </label>
+                <p class="quiz-error" id="error5">Заполните все поля и примите согласие</p>
+            </div>
+            
+            <div class="quiz-nav">
+                <button class="quiz-btn quiz-btn--back" id="btnBack" style="visibility: hidden;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Назад
+                </button>
+                <button class="quiz-btn quiz-btn--next" id="btnNext">
+                    Далее
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quizOverlay = document.getElementById('quizOverlay');
+        const quizClose = document.getElementById('quizClose');
+        const btnNext = document.getElementById('btnNext');
+        const btnBack = document.getElementById('btnBack');
+        const currentStepSpan = document.getElementById('currentStep');
+        const progressBar = document.getElementById('progressBar');
+        let currentPage = 1;
+        const totalPages = 5;
+        
+        document.querySelector('.btn--hero-secondary').addEventListener('click', (e) => {
+            e.preventDefault();
+            quizOverlay.classList.add('quiz-overlay--open');
+            currentPage = 1;
+            updatePage();
+            document.querySelectorAll('.quiz-page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page1').classList.add('active');
+        });
+        
+        quizClose.addEventListener('click', () => quizOverlay.classList.remove('quiz-overlay--open'));
+        quizOverlay.addEventListener('click', (e) => {
+            if (e.target === quizOverlay) quizOverlay.classList.remove('quiz-overlay--open');
+        });
+        
+        function selectOption(label, groupName) {
+            const parent = label.parentElement;
+            parent.querySelectorAll('.quiz-option').forEach(el => el.classList.remove('selected'));
+            label.classList.add('selected');
+            const errEl = document.getElementById('error' + currentPage);
+            if (errEl) errEl.classList.remove('visible');
+        }
+        
+        const phoneInput = document.getElementById('quizPhone');
+        phoneInput.addEventListener('focus', function() {
+            if (this.value === '+7 (___) ___-__-__') { this.value = '+7 ('; this.style.color = '#374151'; }
+        });
+        phoneInput.addEventListener('blur', function() {
+            if (this.value === '+7 (' || this.value === '+7') { this.value = '+7 (___) ___-__-__'; this.style.color = '#9ca3af'; }
+        });
+        phoneInput.addEventListener('input', function() {
+            this.style.color = '#374151';
+            if (this.value === '+7 (___) ___-__-__') return;
+            let val = this.value.replace(/[^\d]/g, '');
+            if (val.startsWith('7')) val = val.substring(1);
+            if (val.length > 10) val = val.substring(0, 10);
+            let formatted = '+7';
+            if (val.length > 0) formatted += ' (' + val.substring(0, 3);
+            if (val.length >= 3) formatted += ') ' + val.substring(3, 6);
+            if (val.length >= 6) formatted += '-' + val.substring(6, 8);
+            if (val.length >= 8) formatted += '-' + val.substring(8, 10);
+            this.value = formatted;
+        });
+        phoneInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Backspace' && this.selectionStart <= 4) { e.preventDefault(); }
+        });
+        
+        btnNext.addEventListener('click', () => {
+            const currentPageEl = document.getElementById('page' + currentPage);
+            
+            if (currentPage <= 4) {
+                const selected = currentPageEl.querySelector('.quiz-option.selected');
+                if (!selected) {
+                    document.getElementById('error' + currentPage).classList.add('visible');
+                    return;
+                }
+            }
+            
+            if (currentPage === totalPages) {
+                const name = document.getElementById('quizName').value;
+                const phone = document.getElementById('quizPhone').value;
+                const check = document.querySelector('.quiz-check.checked');
+                if (!name || !phone || !check) {
+                    document.getElementById('error5').classList.add('visible');
+                    return;
+                }
+                
+                const q1 = document.querySelector('input[name="q1"]:checked')?.value || '';
+                const q2 = document.querySelector('input[name="q2"]:checked')?.value || '';
+                const q3 = document.querySelector('input[name="q3"]:checked')?.value || '';
+                const q4 = document.querySelector('input[name="q4"]:checked')?.value || '';
+                const message = `Подбор мебели:\nГде: ${q1}\nЧто: ${q2}\nТкань: ${q3}\nРассрочка: ${q4}\nИмя: ${name}\nТелефон: ${phone}`;
+                
+                fetch('https://formspree.io/f/xeeynkab', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: name, phone: phone, message: message })
+                })
+                .then(() => {
+                    alert('Спасибо! Мы свяжемся с вами.');
+                    quizOverlay.classList.remove('quiz-overlay--open');
+                })
+                .catch(() => {
+                    alert('Спасибо! Мы свяжемся с вами.');
+                    quizOverlay.classList.remove('quiz-overlay--open');
+                });
+                return;
+            }
+            
+            if (currentPage < totalPages) {
+                document.getElementById('page' + currentPage).classList.remove('active');
+                currentPage++;
+                document.getElementById('page' + currentPage).classList.add('active');
+                updatePage();
+            }
+        });
+        
+        btnBack.addEventListener('click', () => {
+            if (currentPage > 1) {
+                document.getElementById('page' + currentPage).classList.remove('active');
+                currentPage--;
+                document.getElementById('page' + currentPage).classList.add('active');
+                updatePage();
+            }
+        });
+        
+        function updatePage() {
+            currentStepSpan.textContent = currentPage;
+            progressBar.style.width = (currentPage / totalPages * 100) + '%';
+            btnBack.style.visibility = currentPage === 1 ? 'hidden' : 'visible';
+            if (currentPage === totalPages) {
+                btnNext.innerHTML = 'Отправить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+                btnNext.classList.add('green');
+            } else {
+                btnNext.innerHTML = 'Далее <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+                btnNext.classList.remove('green');
+            }
+        }
+    </script>
+    
+</body>
+</html>
