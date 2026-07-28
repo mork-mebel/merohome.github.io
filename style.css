@@ -720,3 +720,124 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
 .footer__legal p { font-size: 13px; color: #666; line-height: 1.8; margin-bottom: 8px; }
 .footer__legal a { color: #999; text-decoration: underline; }
 .footer__legal a:hover { color: #d4b98c; }
+
+/* ============================================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (телефоны до 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Главный экран */
+    .hero {
+        padding: 60px 0 80px;
+        min-height: auto;
+    }
+    .hero__title {
+        font-size: 32px;
+    }
+    .hero__subtitle {
+        font-size: 20px;
+    }
+    .hero__tagline {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    /* Кнопки — одна под другой */
+    .hero__actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn--hero-primary,
+    .btn--hero-secondary {
+        width: 100%;
+        min-width: auto;
+        font-size: 20px;
+    }
+
+    /* Иконки преимуществ — компактнее */
+    .hero__features {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+    }
+    .hero__features-col {
+        gap: 10px;
+    }
+    .feature__icon {
+        width: 36px;
+        height: 36px;
+    }
+    .feature__icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    .feature__title {
+        font-size: 15px;
+    }
+    .feature__desc {
+        font-size: 13px;
+    }
+
+    /* Каталог — вертикально */
+    .catalog__scroll {
+        overflow-x: visible;
+    }
+    .catalog__track {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    /* Квиз */
+    .quiz-modal {
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 95%;
+    }
+    .quiz-title {
+        font-size: 22px;
+    }
+    .quiz-options--row {
+        flex-direction: column;
+    }
+    .quiz-options--row .quiz-option {
+        width: 100%;
+    }
+    .quiz-question {
+        font-size: 16px;
+    }
+    .quiz-required {
+        display: inline;
+    }
+    .quiz-form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Секции */
+    .section-title {
+        font-size: 24px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Корзина */
+    .cart-panel {
+        width: 100%;
+        right: -100%;
+    }
+
+    /* Футер */
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .footer__links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
