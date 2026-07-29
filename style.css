@@ -809,11 +809,39 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     display: none;
 }
 
+.header__search {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+.header__search:hover svg {
+    stroke: #d4b98c;
+}
+
 /* ============================================================
    МОБИЛЬНАЯ АДАПТАЦИЯ (телефоны до 768px)
    ============================================================ */
 @media (max-width: 768px) {
         /* Хедер */
+   @media (max-width: 768px) {
+    .header__phone {
+        display: none;
+    }
+    .burger {
+        display: flex;
+        position: static;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        bottom: auto;
+        right: auto;
+    }
+}
         .burger {
         display: flex;
         flex-direction: column;
