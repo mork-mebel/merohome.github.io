@@ -820,7 +820,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     .hero {
         background-size: 110% auto;
         background-position: center 60%;
-        padding: 20px 0 300px;
+        padding: 20px 0 300px; 
         min-height: auto;
     }
     .hero__inner {
@@ -919,6 +919,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     }
 
     /* Каталог */
+    .catalog {
+        padding-top: 0px;
+    }
     .catalog__scroll {
         overflow-x: visible;
     }
