@@ -13,7 +13,12 @@
     <header class="header" id="header">
     <div class="container header__inner">
         <a href="#" class="logo">Mero</a>
-        <nav class="nav">
+            <button class="burger" id="burger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav" id="nav">
             <a href="#catalog">Каталог</a>
             <a href="#about">О нас</a>
             <a href="#delivery">Доставка</a>
@@ -834,6 +839,10 @@
         <p>Мы используем cookies для улучшения работы сайта. Продолжая, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
         <button onclick="document.getElementById('cookieBanner').style.display='none'">OK</button>
     </div>
-
+    <script>
+        document.getElementById('burger').addEventListener('click', () => {
+            document.getElementById('nav').classList.toggle('nav--open');
+        });
+    </script>
 </body>
 </html>
