@@ -923,7 +923,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
         flex-direction: column !important;
         align-items: flex-start;
         gap: 5px;
-        display: none;
+        display: none !important;
     }
     .hero__link-divider {
         display: none !important;
