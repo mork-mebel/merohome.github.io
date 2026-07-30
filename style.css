@@ -26,6 +26,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
 .container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
 .section-title { font-size: 36px; text-align: center; margin-bottom: 50px; }
 
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #b1a296;
+    z-index: 1000;
+    width: 0%;
+    transition: width 0.2s;
+}
 /* Кнопки */
 .btn { display: inline-block; padding: 14px 36px; font-family: 'TT Commons', 'Segoe UI', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: var(--radius); cursor: pointer; text-decoration: none; text-align: center; transition: 0.3s; }
 .btn--primary {
