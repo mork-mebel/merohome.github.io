@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mero — Тест маски</title>
+    <style>
+        .modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:999; justify-content:center; align-items:center; }
+        .modal-overlay.open { display:flex; }
+        .modal-box { background:#fff; padding:30px; border-radius:10px; width:350px; }
+        .modal-box input { width:100%; padding:12px; font-size:18px; border:1px solid #ddd; border-radius:6px; }
+        .modal-box button { width:100%; padding:14px; background:#b1a296; color:#fff; border:none; border-radius:6px; font-size:18px; cursor:pointer; margin-top:10px; }
+    </style>
+</head>
+<body>
+
+    <button onclick="openModal()" style="padding:20px;font-size:20px;margin:50px;">Открыть форму</button>
+
+    <div class="modal-overlay" id="m">
+        <div class="modal-box">
+            <h3>Оставить заявку</h3>
+            <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+            <button onclick="document.getElementById('m').classList.remove('open')">Отправить</button>
+        </div>
+    </div>
+
+               <script>
+        function openModal() {
+            document.getElementById('m').classList.add('open');
+            var p = document.getElementById('phone');
+            p.value = '+7 (___) ___-__-__';
+            p.style.color = '#9ca3af';
+            setTimeout(() => { p.focus(); p.setSelectionRange(4,4); }, 100);
+        }
+
+        document.getElementById('m').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('open');
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') document.getElementById('m').classList.remove('open');
+        });
+
+        (function() {
+            var p = document.getElementById('phone');
+            var placeholder = '+7 (___) ___-__-__';
+
+            p.addEventListener('input', function() {
+                var raw = this.value.replace(/\D/g, '');
+                if (!raw) { this.value = placeholder; this.style.color = '#9ca3af'; return; }
+                
+                if (raw.startsWith('78') || raw.startsWith('8')) {
+                    raw = raw.startsWith('78') ? raw.substring(2) : raw.substring(1);
+                    if (raw.length > 10) raw = raw.slice(0,10);
+                    var o = '8';
+                    if (raw.length) o += ' (' + raw.slice(0,3);
+                    if (raw.length >= 3) o += ') ' + raw.slice(3,6);
+                    if (raw.length >= 6) o += '-' + raw.slice(6,8);
+                    if (raw.length >= 8) o += '-' + raw.slice(8,10);
+                    this.value = o; this.style.color = '#374151';
+                    var pos = this.value.indexOf('_');
+                    if (pos === -1) pos = this.value.length;
+                    this.setSelectionRange(pos, pos);
+                    return;
+                }
+                
+                if (raw.startsWith('7')) raw = raw.slice(1);
+                if (raw.length > 10) raw = raw.slice(0,10);
+                var o = '+7';
+                if (raw.length) o += ' (' + raw.slice(0,3);
+                if (raw.length >= 3) o += ') ' + raw.slice(3,6);
+                if (raw.length >= 6) o += '-' + raw.slice(6,8);
+                if (raw.length >= 8) o += '-' + raw.slice(8,10);
+                if (raw.length < 10) {
+                    var m = '+7 (___) ___-__-__';
+                    for (var i = o.length; i < m.length; i++) o += m[i];
+                }
+                this.value = o; this.style.color = '#374151';
+                var pos = this.value.indexOf('_');
+                if (pos === -1) pos = this.value.length;
+                this.setSelectionRange(pos, pos);
+            });
+
+            p.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace') {
+                    var raw = this.value.replace(/\D/g, '');
+                    if (raw.length <= 1) {
+                        e.preventDefault();
+                        this.value = placeholder;
+                        this.style.color = '#9ca3af';
+                        return;
+                    }
+                    raw = raw.slice(0, -1);
+                    var event = new Event('input', { bubbles: true });
+                    this.value = raw;
+                    this.dispatchEvent(event);
+                    e.preventDefault();
+                }
+            });
+
+            p.addEventListener('blur', function() {
+                if (this.value.replace(/\D/g,'').length < 2) { this.value = placeholder; this.style.color = '#9ca3af'; }
+            });
+        })();
+    </script>
+
+</body>
+</html>

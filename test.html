@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body>
+    <button onclick="document.getElementById('modal').style.display='flex'">Открыть</button>
+    <div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;">
+        <div style="background:#fff;padding:20px;width:300px;">
+            <span onclick="document.getElementById('modal').style.display='none'" style="cursor:pointer;float:right;">&times;</span>
+            <input type="tel" id="phone">
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('phone');
+        const placeholder = '+7 (___) ___-__-__';
+        input.value = placeholder;
+        input.style.color = '#9ca3af';
+
+        input.addEventListener('input', function() {
+            let raw = this.value.replace(/\D/g, '');
+            if (raw.length === 0) { this.value = placeholder; this.style.color = '#9ca3af'; return; }
+            if (raw.startsWith('8')) {
+                raw = raw.substring(1); if (raw.length > 10) raw = raw.slice(0, 10);
+                let out = '8';
+                if (raw.length > 0) out += ' (' + raw.slice(0, 3);
+                if (raw.length >= 3) out += ') ' + raw.slice(3, 6);
+                if (raw.length >= 6) out += '-' + raw.slice(6, 8);
+                if (raw.length >= 8) out += '-' + raw.slice(8, 10);
+                this.value = out; this.style.color = '#374151'; return;
+            }
+            if (raw.startsWith('7')) raw = raw.substring(1);
+            if (raw.length > 10) raw = raw.slice(0, 10);
+            let out = '+7';
+            if (raw.length > 0) out += ' (' + raw.slice(0, 3);
+            if (raw.length >= 3) out += ') ' + raw.slice(3, 6);
+            if (raw.length >= 6) out += '-' + raw.slice(6, 8);
+            if (raw.length >= 8) out += '-' + raw.slice(8, 10);
+            if (raw.length < 10) {
+                const mask = '+7 (___) ___-__-__';
+                for (let i = out.length; i < mask.length; i++) out += mask[i];
+            }
+            this.value = out; this.style.color = '#374151';
+        });
+    </script>
+</body>
+</html>

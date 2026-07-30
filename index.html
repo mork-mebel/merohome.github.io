@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mero — Садовая мебель премиум-класса из бруса</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪑</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='14' y='14' width='36' height='36' rx='4' transform='rotate(45 14 14)' fill='%23c5c1bd'/><rect x='20' y='20' width='24' height='24' rx='3' transform='rotate(45 20 20)' fill='%231a1a2e'/></svg>"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪑</text></svg>">
 </head>
 <body>
     <!-- Прогресс-бар -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Шапка -->
+   <!-- Шапка -->
 <header class="header" id="header">
     <div class="container header__inner">
         <button class="burger" id="burger" aria-label="Меню">
@@ -19,39 +19,42 @@
             <span></span>
             <span></span>
         </button>
-        <a href="#" class="logo">Mero</a>
+        <a href="#" class="logo">
+            <svg width="160" height="50" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="16" y="14" width="28" height="28" rx="3" transform="rotate(45 16 14)" fill="#c5c1bd"/>
+                <rect x="20" y="18" width="20" height="20" rx="2" transform="rotate(45 20 18)" fill="#1a1a2e"/>
+                <text x="65" y="42" font-family="Georgia, serif" font-size="32" font-weight="700" font-style="italic" fill="#c5c1bd">Mero</text>
+            </svg>
+        </a>
         <nav class="nav" id="nav">
             <a href="#catalog">Каталог</a>
             <a href="#about">О нас</a>
             <a href="#delivery">Доставка</a>
             <a href="#contacts">Контакты</a>
         </nav>
-        <div class="header__right">
-            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
-            <button class="header__search" aria-label="Поиск">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c5c1bd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <div class="header__right">
+            <button id="searchToggle" class="header__search-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c5c1bd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"/>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                 </svg>
             </button>
+            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
             <a href="#" class="header__cart" aria-label="Корзина">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4b98c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-                </svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4b98c" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                 <span class="cart-count" style="display:none;">0</span>
             </a>
         </div>
     </div>
-    </header>
+</header>
 
     <!-- Главный экран -->
     <section class="hero">
         <div class="container hero__inner">
             <div class="hero__left">
-                <p class="hero__slogan">Надёжно. Красиво. Богато</p>
+                <p class="hero__slogan">Надёжно. Красиво. Для жизни</p>
                 <h1 class="hero__title">Садовая мебель <span class="hero__title--accent">премиум-класса</span><br>из бруса <span class="hero__title--accent">от 11 990 ₽</span><br>от 2 дней с бесплатной сборкой</h1>
-                <p class="hero__subtitle">Собственное производство в Москве. Работаем с 2019 года. Подберём мебель под ваш приусадебный участок, террасу, сад или бассейн. Покажем материал, цвет и стоимость до заказа. Доставим и соберём.</p>
+                <p class="hero__subtitle">Собственное производство с 2019 года. Подберём мебель под ваш участок, террасу или сад. Покажем материал и стоимость до заказа. Доставим и соберём.</p>
                 <div class="hero__actions">
                     <a href="#" class="btn btn--hero-secondary">Подобрать мебель ›</a>
                     <span class="hero__action-hint">Ответьте на 5 вопросов за 2 минуты<br>и получите 3 варианта под ваш бюджет</span>
@@ -92,7 +95,7 @@
             <div class="catalog__scroll">
                 <div class="catalog__track">
                 <!-- Кресло -->
-                <div class="card">
+                <div class="card" data-keywords="кресло стул сидеть сад отдых">
                     <div class="card__image" data-gallery="chair">
                         <img src="ck1.png" alt="Кресло Mero">
                         <div class="card__zoom">
@@ -119,7 +122,7 @@
 </div>
                 </div>
                 <!-- Диван -->
-                <div class="card">
+                <div class="card" data-keywords="диван софа мягкий сад отдых">
                     <div class="card__image" data-gallery="sofa">
                         <img src="https://placehold.co/500x400/2e3d50/ffd540?text=Диван+Mero" alt="Диван Mero">
                         <div class="card__zoom">🔍</div>
@@ -139,7 +142,7 @@
 </div>
                 </div>
                 <!-- Стол -->
-                <div class="card">
+                <div class="card" data-keywords="стол обеденный журнальный сад терраса">
                     <div class="card__image" data-gallery="table">
                         <img src="https://placehold.co/500x400/2e3d50/ffd540?text=Стол+Mero" alt="Стол Mero">
                         <div class="card__zoom">🔍</div>
@@ -307,13 +310,24 @@
 <section class="cta-footer">
     <h2>Остались вопросы?</h2>
     <p>Позвоните или напишите — поможем выбрать</p>
-    <a href="tel:+79035571945" class="btn btn--hero-secondary">📞 Позвонить</a>
+    <a href="tel:+79035571945" class="btn btn--hero-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:8px;">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Позвонить
+    </a>
 </section>
 
     <!-- Футер -->
     <footer class="footer">
         <div class="container footer__inner">
-            <a href="index.html" class="logo">Mero</a>
+            <a href="index.html" class="logo">
+                <svg width="160" height="50" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="16" y="14" width="28" height="28" rx="3" transform="rotate(45 16 14)" fill="#c5c1bd"/>
+                    <rect x="20" y="18" width="20" height="20" rx="2" transform="rotate(45 20 18)" fill="#1a1a2e"/>
+                    <text x="65" y="42" font-family="Georgia, serif" font-size="32" font-weight="700" font-style="italic" fill="#c5c1bd">Mero</text>
+                </svg>
+            </a>
             <div class="footer__links">
                 <a href="index.html#catalog">Каталог</a>
                 <a href="privacy.html">Политика конфиденциальности</a>
@@ -327,15 +341,28 @@
                     </svg>
                 </a>
                 <a href="#" aria-label="WhatsApp">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 1 1 16.1-3.8z"/>
-                    </svg>
-                </a>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color:#999;">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z"/>
+    </svg>
+</a>
                 <a href="#" aria-label="VK">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M15.5 12.5c1 0 2 .5 2.5 2 .5 1.5.5 3 .5 3.5h-2c0-1 0-2-.5-2.5s-1.5-.5-2 0c-.5.5-.5 1.5-.5 2.5h-2c0-2 0-4 .5-5.5s1.5-2 3-2c1 0 1.5.5 1.5.5"/>
-                    </svg>
-                </a>
+    <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor" style="color:#999;">
+        <path d="M440.649,295.361c16.984,16.582,34.909,32.182,50.142,50.436
+        c6.729,8.112,13.099,16.482,17.973,25.896c6.906,13.382,0.651,28.108-11.348,28.907l-74.59-0.034
+        c-19.238,1.596-34.585-6.148-47.489-19.302c-10.327-10.519-19.891-21.714-29.821-32.588c-4.071-4.444-8.332-8.626-13.422-11.932
+        c-10.182-6.609-19.021-4.586-24.84,6.034c-5.926,10.802-7.271,22.762-7.853,34.8c-0.799,17.564-6.108,22.182-23.751,22.986
+        c-37.705,1.778-73.489-3.926-106.732-22.947c-29.308-16.768-52.034-40.441-71.816-67.24
+        C58.589,258.194,29.094,200.852,2.586,141.904c-5.967-13.281-1.603-20.41,13.051-20.663c24.333-0.473,48.663-0.439,73.025-0.034
+        c9.89,0.145,16.437,5.817,20.256,15.16c13.165,32.371,29.274,63.169,49.494,91.716c5.385,7.6,10.876,15.201,18.694,20.55
+        c8.65,5.923,15.236,3.96,19.305-5.676c2.582-6.11,3.713-12.691,4.295-19.234c1.928-22.513,2.182-44.988-1.199-67.422
+        c-2.076-14.001-9.962-23.065-23.933-25.714c-7.129-1.351-6.068-4.004-2.616-8.073c5.995-7.018,11.634-11.387,22.875-11.387h84.298
+        c13.271,2.619,16.218,8.581,18.035,21.934l0.072,93.637c-0.145,5.169,2.582,20.51,11.893,23.931
+        c7.452,2.436,12.364-3.526,16.836-8.251c20.183-21.421,34.588-46.737,47.457-72.951c5.711-11.527,10.622-23.497,15.381-35.458
+        c3.526-8.875,9.059-13.242,19.056-13.049l81.132,0.072c2.406,0,4.84,0.035,7.17,0.434c13.671,2.33,17.418,8.211,13.195,21.561
+        c-6.653,20.945-19.598,38.4-32.255,55.935c-13.53,18.721-28.001,36.802-41.418,55.634
+        C424.357,271.756,425.336,280.424,440.649,295.361L440.649,295.361z"/>
+    </svg>
+</a>
             </div>
         </div>
         <div class="footer__legal">
@@ -343,7 +370,7 @@
                 <p>© 2026 ИП Данильцев Илья Владимирович (ИНН 773575959602, ОГРНИП 315774600297813).</p>
                 <p>Адрес: 124460 г. Москва, г. Зеленоград, корп.1133.</p>
                 <p>Товарный знак «Mero» является собственностью ИП Данильцева И.В.</p>
-                <p>Все материалы сайта (тексты, изображения, фотографии, дизайн, логотипы) защищены авторским правом. Использование без письменного разрешения запрещено.</p>
+                <p>Все материалы сайта защищены авторским правом. Использование без письменного разрешения запрещено.</p>
                 <p>Обработка персональных данных осуществляется в соответствии с <a href="privacy.html">Политикой конфиденциальности</a> и на основании <a href="consent.html">Согласия на обработку персональных данных</a>.</p>
                 <p>Подробные условия сотрудничества и покупки указаны в <a href="offer.html">Публичной оферте</a>.</p>
                 <p>Вы вправе отозвать согласие на обработку персональных данных в любой момент, направив письменное уведомление по указанному адресу.</p>
@@ -351,21 +378,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Модальное окно -->
-    <div class="modal" id="modal">
-        <div class="modal__content">
-            <span class="modal__close">&times;</span>
-            <h3>Оставить заявку</h3>
-                <form id="orderForm" action="https://formspree.io/f/xeeynkab" method="POST">
-                
-                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
-                <p style="color:#e74c3c;text-align:center;margin-bottom:10px;font-weight:600;">⚡ Ответим в течение 15 минут</p>
-                <button type="submit" class="btn btn--primary btn--full">Получить расчёт</button>
-            </form>
-        </div>
-    </div>
-
     <!-- Кнопка наверх (появляется при скролле) -->
     <button class="scroll-top" id="scrollTop" aria-label="Наверх">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -383,38 +395,6 @@
         </svg>
     </button>
 
-    <script>
-        // Модальное окно
-        const modal = document.getElementById('modal');
-        const openBtns = document.querySelectorAll('.open-modal');
-        const closeBtn = document.querySelector('.modal__close');
-
-        openBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                modal.classList.add('modal--open');
-            });
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('modal--open');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.remove('modal--open');
-        });
-
-        // Кнопка наверх
-        const scrollTop = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => {
-            scrollTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
-        });
-        scrollTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-    
     <script>
         // Анимация появления при скролле
         const observer = new IntersectionObserver((entries) => {
@@ -502,7 +482,7 @@
             
             <h3 class="quiz-title">Подбор мебели</h3>
             <p class="quiz-step" id="quizStep">Вопрос <span id="currentStep">1</span> из 5</p>
-            <div class="quiz-progress"><div class="quiz-progress__bar" id="progressBar" style="width: 16%"></div></div>
+            <div class="quiz-progress"><div class="quiz-progress__bar" id="quizProgressBar" style="width: 16%"></div></div>
             
             <!-- Страница 1 -->
             <div class="quiz-page active" data-page="1" id="page1">
@@ -617,7 +597,7 @@
         const btnNext = document.getElementById('btnNext');
         const btnBack = document.getElementById('btnBack');
         const currentStepSpan = document.getElementById('currentStep');
-        const quizProgressBar = document.getElementById('progressBar');
+        const quizProgressBar = document.getElementById('quizProgressBar');
         let currentPage = 1;
         const totalPages = 5;
         
@@ -643,30 +623,7 @@
             if (errEl) errEl.classList.remove('visible');
         }
         
-        const phoneInput = document.getElementById('quizPhone');
-        phoneInput.addEventListener('focus', function() {
-            if (this.value === '+7 (___) ___-__-__') { this.value = '+7 ('; this.style.color = '#374151'; }
-        });
-        phoneInput.addEventListener('blur', function() {
-            if (this.value === '+7 (' || this.value === '+7') { this.value = '+7 (___) ___-__-__'; this.style.color = '#9ca3af'; }
-        });
-        phoneInput.addEventListener('input', function() {
-            this.style.color = '#374151';
-            if (this.value === '+7 (___) ___-__-__') return;
-            let val = this.value.replace(/[^\d]/g, '');
-            if (val.startsWith('7')) val = val.substring(1);
-            if (val.length > 10) val = val.substring(0, 10);
-            let formatted = '+7';
-            if (val.length > 0) formatted += ' (' + val.substring(0, 3);
-            if (val.length >= 3) formatted += ') ' + val.substring(3, 6);
-            if (val.length >= 6) formatted += '-' + val.substring(6, 8);
-            if (val.length >= 8) formatted += '-' + val.substring(8, 10);
-            this.value = formatted;
-        });
-        phoneInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Backspace' && this.selectionStart <= 4) { e.preventDefault(); }
-        });
-        
+       
         btnNext.addEventListener('click', () => {
             const currentPageEl = document.getElementById('page' + currentPage);
             
@@ -907,51 +864,404 @@
             document.getElementById('progressBar').style.width = progress + '%';
         });
     </script>
+
+        <!-- Модальное окно -->
+    <div id="modalBox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:200;justify-content:center;align-items:center;">
+        <div style="background:#fff;padding:40px;border-radius:8px;width:90%;max-width:450px;position:relative;">
+            <span id="modalCloseBtn" style="position:absolute;top:10px;right:15px;font-size:28px;cursor:pointer;color:#999;">&times;</span>
+            <h3 style="font-size:22px;margin-bottom:20px;text-align:center;">Оставить заявку</h3>
+            <form action="https://formspree.io/f/xeeynkab" method="POST">
+                <input type="tel" id="phoneField" name="phone" placeholder="+7 (___) ___-__-__" required style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #e8e8e8;border-radius:8px;font-size:18px;">
+                <p style="color:#27ae60;text-align:center;margin-bottom:10px;font-weight:600;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    Ответим в течение 15 минут
+                </p>
+                <button type="submit" style="width:100%;padding:16px;background:#c9a96e;color:#fff;border:none;border-radius:8px;font-size:20px;font-weight:600;cursor:pointer;">Получить расчёт</button>
+            </form>
+        </div>
+    </div>
     
-    <script>
-        // Сохранение неотправленных номеров
-        function saveAbandonedPhone(source) {
-            const phoneInputs = document.querySelectorAll('input[type="tel"]');
-            phoneInputs.forEach(input => {
-                const phone = input.value.replace(/\D/g, '');
-                if (phone.length >= 10 && !input.dataset.saved) {
-                    input.dataset.saved = '1';
-                    const now = new Date().toLocaleString('ru-RU');
-                    const lead = `[${now}] ${source} | Телефон: ${input.value}\n`;
-                    
-                    // Сохраняем локально через сервер
-                    fetch('/save-lead', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ lead: lead })
-                    }).catch(() => {});
-                    
-                    // Отправляем через Formspree
-                    const data = new FormData();
-                    data.append('name', 'Не указано');
-                    data.append('phone', input.value);
-                    data.append('message', `⚠️ Ввёл номер, но не отправил заявку (${source})`);
-                    fetch('https://formspree.io/f/xeeynkab', {
-                        method: 'POST',
-                        headers: { 'Accept': 'application/json' },
-                        body: data
-                    }).catch(() => {});
+<script data-cfasync="false">
+    document.addEventListener('DOMContentLoaded', function() {
+        var placeholder = '+7 (___) ___-__-__';
+
+        function formatPhone(raw) {
+            if (!raw || raw.length === 0) return { val: placeholder, color: '#9ca3af' };
+            if (raw.startsWith('78') || raw.startsWith('8')) {
+                raw = raw.startsWith('78') ? raw.substring(2) : raw.substring(1);
+                if (raw.length > 10) raw = raw.slice(0, 10);
+                var o = '8';
+                if (raw.length) o += ' (' + raw.slice(0, 3);
+                if (raw.length >= 3) o += ') ' + raw.slice(3, 6);
+                if (raw.length >= 6) o += '-' + raw.slice(6, 8);
+                if (raw.length >= 8) o += '-' + raw.slice(8, 10);
+                return { val: o, color: '#374151' };
+            }
+            if (raw.startsWith('7')) raw = raw.slice(1);
+            if (raw.length > 10) raw = raw.slice(0, 10);
+            var o = '+7';
+            if (raw.length) o += ' (' + raw.slice(0, 3);
+            if (raw.length >= 3) o += ') ' + raw.slice(3, 6);
+            if (raw.length >= 6) o += '-' + raw.slice(6, 8);
+            if (raw.length >= 8) o += '-' + raw.slice(8, 10);
+            if (raw.length < 10) {
+                var m = '+7 (___) ___-__-__';
+                for (var i = o.length; i < m.length; i++) o += m[i];
+            }
+            return { val: o, color: '#374151' };
+        }
+
+        function setupPhone(input) {
+            input.value = placeholder;
+            input.style.color = '#9ca3af';
+            input.addEventListener('input', function() {
+                var raw = this.value.replace(/\D/g, '');
+                var result = formatPhone(raw);
+                this.value = result.val;
+                this.style.color = result.color;
+                var pos = this.value.indexOf('_');
+                if (pos === -1) pos = this.value.length;
+                this.setSelectionRange(pos, pos);
+            });
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace') {
+                    var raw = this.value.replace(/\D/g, '');
+                    if (raw.length <= 1) {
+                        e.preventDefault();
+                        this.value = placeholder;
+                        this.style.color = '#9ca3af';
+                        return;
+                    }
+                    raw = raw.slice(0, -1);
+                    var event = new Event('input', { bubbles: true });
+                    this.value = raw;
+                    this.dispatchEvent(event);
+                    e.preventDefault();
                 }
+            });
+            input.addEventListener('blur', function() {
+                if (this.value.replace(/\D/g, '').length < 2) { this.value = placeholder; this.style.color = '#9ca3af'; }
             });
         }
 
-        const quizPhoneInput = document.getElementById('quizPhone');
-        if (quizPhoneInput) {
-            quizPhoneInput.addEventListener('blur', () => saveAbandonedPhone('Квиз'));
-        }
+        // Модальное окно
+        var modalPhone = document.getElementById('phoneField');
+        if (modalPhone) setupPhone(modalPhone);
 
-        const modalPhoneInput = document.querySelector('#modal input[type="tel"]');
-        if (modalPhoneInput) {
-            modalPhoneInput.addEventListener('blur', () => saveAbandonedPhone('Форма заявки'));
-        }
+        // Квиз
+        var quizPhone = document.getElementById('quizPhone');
+        if (quizPhone) setupPhone(quizPhone);
 
-        document.getElementById('quizClose').addEventListener('click', () => saveAbandonedPhone('Квиз закрыт'));
-    </script>
-    
+        // Открытие модалки
+        var modalBox = document.getElementById('modalBox');
+        if (modalBox) {
+            document.querySelectorAll('.open-modal').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (modalPhone) { modalPhone.value = placeholder; modalPhone.style.color = '#9ca3af'; }
+                    modalBox.style.display = 'flex';
+                    setTimeout(function() { if (modalPhone) { modalPhone.focus(); modalPhone.setSelectionRange(4, 4); } }, 200);
+                });
+            });
+            document.getElementById('modalCloseBtn').addEventListener('click', function() { modalBox.style.display = 'none'; });
+            modalBox.addEventListener('click', function(e) { if (e.target === modalBox) modalBox.style.display = 'none'; });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modalBox.style.display === 'flex') modalBox.style.display = 'none'; });
+        }
+    });
+</script>
+
+<script>
+    (function() {
+        var scrollTopBtn = document.getElementById('scrollTop');
+        if (!scrollTopBtn) return;
+        window.addEventListener('scroll', function() {
+            scrollTopBtn.style.display = window.scrollY > 500 ? 'flex' : 'none';
+        });
+        scrollTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+</script>
+
+<!-- Модальное окно поиска -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+        <button class="search-modal__close" id="searchModalClose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="search-modal__input">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="searchInput" placeholder="Что ищете? (попробуйте: диван, стол, комплект)">
+        </div>
+        <p class="search-modal__hint" id="searchHint">Введите запрос, чтобы начать поиск</p>
+        <p class="search-modal__example">Например: диван, стол, комплект</p>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var searchToggle = document.getElementById('searchToggle');
+    var searchOverlay = document.getElementById('searchOverlay');
+    var searchInput = document.getElementById('searchInput');
+    var searchHint = document.getElementById('searchHint');
+    var searchClose = document.getElementById('searchModalClose');
+
+    if (!searchToggle || !searchOverlay) return;
+
+    // Создаём контейнер для выпадающих подсказок
+    var suggestionsBox = document.createElement('div');
+    suggestionsBox.className = 'search-suggestions';
+    suggestionsBox.style.cssText = 'display:none; background:#fff; border-radius:0 0 8px 8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); max-height:300px; overflow-y:auto;';
+    searchInput.parentNode.parentNode.appendChild(suggestionsBox);
+
+    // Переменные для отслеживания
+    var lastQuery = '';
+    var querySent = false;
+
+    // Функция отправки статистики
+    function sendStat(action, query, productName) {
+        var data = {
+            action: action,
+            query: query || '',
+            product: productName || '',
+            page: window.location.href,
+            timestamp: new Date().toISOString()
+        };
+
+        fetch('https://formspree.io/f/xeeynkab', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                subject: '🔍 Статистика поиска Mero',
+                message: 'Действие: ' + data.action + '\n' +
+                         'Запрос: ' + data.query + '\n' +
+                         'Товар: ' + data.product + '\n' +
+                         'Страница: ' + data.page + '\n' +
+                         'Время: ' + data.timestamp
+            })
+        }).catch(function(err) {
+            // Молча игнорируем ошибки
+        });
+    }
+
+    // Собираем все товары из карточек
+    function getProducts() {
+        var products = [];
+        document.querySelectorAll('.card').forEach(function(card) {
+            var name = card.querySelector('h3');
+            var price = card.querySelector('.card__price');
+            var img = card.querySelector('img');
+            var keywords = card.getAttribute('data-keywords') || '';
+            if (name) {
+                products.push({
+                    name: name.textContent.trim(),
+                    price: price ? price.textContent.trim() : '',
+                    img: img ? img.src : '',
+                    keywords: keywords,
+                    card: card
+                });
+            }
+        });
+        return products;
+    }
+
+    // Открытие поиска
+    searchToggle.addEventListener('click', function() {
+        searchOverlay.classList.add('search-overlay--open');
+        lastQuery = '';
+        querySent = false;
+        if (searchInput) {
+            searchInput.value = '';
+            setTimeout(function() { searchInput.focus(); }, 100);
+        }
+        if (searchHint) searchHint.style.display = 'block';
+        suggestionsBox.style.display = 'none';
+        suggestionsBox.innerHTML = '';
+        document.querySelectorAll('.card').forEach(function(c) {
+            c.style.outline = '';
+            c.style.boxShadow = '';
+        });
+    });
+
+    // Закрытие поиска БЕЗ клика по товару
+    function closeSearch() {
+        if (lastQuery && !querySent) {
+            sendStat('закрыл форму поиска', lastQuery, '');
+        }
+        searchOverlay.classList.remove('search-overlay--open');
+        suggestionsBox.style.display = 'none';
+        suggestionsBox.innerHTML = '';
+        lastQuery = '';
+        querySent = false;
+        document.querySelectorAll('.card').forEach(function(c) {
+            c.style.outline = '';
+            c.style.boxShadow = '';
+        });
+    }
+
+    searchClose.addEventListener('click', closeSearch);
+
+    searchOverlay.addEventListener('click', function(e) {
+        if (e.target === searchOverlay) closeSearch();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('search-overlay--open')) {
+            closeSearch();
+        }
+    });
+
+    // Поиск с выпадающими подсказками
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            var q = this.value.toLowerCase().trim();
+            lastQuery = q;
+            querySent = false;
+            
+            if (!q) {
+                suggestionsBox.style.display = 'none';
+                suggestionsBox.innerHTML = '';
+                if (searchHint) searchHint.style.display = 'block';
+                document.querySelectorAll('.card').forEach(function(c) {
+                    c.style.outline = '';
+                    c.style.boxShadow = '';
+                });
+                return;
+            }
+
+            if (searchHint) searchHint.style.display = 'none';
+
+            var products = getProducts();
+            var matched = [];
+
+            products.forEach(function(p) {
+                var all = (p.name + ' ' + p.keywords).toLowerCase();
+                if (all.indexOf(q) !== -1) {
+                    matched.push(p);
+                }
+            });
+
+            // Показываем подсказки
+            if (matched.length > 0) {
+                suggestionsBox.innerHTML = '';
+                matched.forEach(function(p) {
+                    var item = document.createElement('div');
+                    item.style.cssText = 'display:flex; align-items:center; gap:12px; padding:12px 16px; cursor:pointer; border-bottom:1px solid #f0f0f0; transition:background 0.2s;';
+                    
+                    var imgEl = document.createElement('img');
+                    imgEl.src = p.img;
+                    imgEl.style.cssText = 'width:48px; height:48px; object-fit:cover; border-radius:6px; flex-shrink:0;';
+                    
+                    var info = document.createElement('div');
+                    info.style.flex = '1';
+                    
+                    var nameEl = document.createElement('div');
+                    nameEl.textContent = p.name;
+                    nameEl.style.cssText = 'font-weight:600; font-size:15px; color:#1a1a2e;';
+                    
+                    var priceEl = document.createElement('div');
+                    priceEl.textContent = p.price;
+                    priceEl.style.cssText = 'font-size:14px; color:#c08552; font-weight:600; margin-top:4px;';
+                    
+                    info.appendChild(nameEl);
+                    info.appendChild(priceEl);
+                    item.appendChild(imgEl);
+                    item.appendChild(info);
+
+                    item.addEventListener('mouseenter', function() {
+                        this.style.background = '#f9f5f0';
+                    });
+                    item.addEventListener('mouseleave', function() {
+                        this.style.background = '';
+                    });
+
+                    // При клике на товар
+                    item.addEventListener('click', function() {
+                        // Определяем тип товара для статистики
+                        var productType = '';
+                        if (p.name.toLowerCase().indexOf('кресло') !== -1) productType = 'кресло';
+                        else if (p.name.toLowerCase().indexOf('диван') !== -1) productType = 'диван';
+                        else if (p.name.toLowerCase().indexOf('стол') !== -1) productType = 'стол';
+                        else if (p.name.toLowerCase().indexOf('комплект') !== -1) productType = 'комплект';
+                        else productType = p.name;
+
+                        sendStat('кликнул по товару: ' + productType, lastQuery, p.name);
+                        querySent = true;
+                        
+                        closeSearchClean();
+                        
+                        // Подсвечиваем карточку
+                        document.querySelectorAll('.card').forEach(function(c) {
+                            c.style.outline = '';
+                            c.style.boxShadow = '';
+                        });
+                        p.card.style.outline = '3px solid #c08552';
+                        p.card.style.outlineOffset = '2px';
+                        p.card.style.boxShadow = '0 0 25px rgba(192,133,82,0.6)';
+                        p.card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        setTimeout(function() {
+                            p.card.style.outline = '';
+                            p.card.style.boxShadow = '';
+                        }, 3000);
+                    });
+
+                    suggestionsBox.appendChild(item);
+                });
+                suggestionsBox.style.display = 'block';
+            } else {
+                suggestionsBox.innerHTML = '<div style="padding:16px; text-align:center; color:#999;">Ничего не найдено</div>';
+                suggestionsBox.style.display = 'block';
+            }
+
+            // Подсвечиваем карточки на странице
+            document.querySelectorAll('.card').forEach(function(card) {
+                var keywords = card.getAttribute('data-keywords') || '';
+                var text = card.innerText || '';
+                var all = (keywords + ' ' + text).toLowerCase();
+                if (all.indexOf(q) !== -1) {
+                    card.style.outline = '2px solid #c08552';
+                    card.style.outlineOffset = '2px';
+                    card.style.boxShadow = '0 0 15px rgba(192,133,82,0.3)';
+                } else {
+                    card.style.outline = '';
+                    card.style.boxShadow = '';
+                }
+            });
+        });
+
+        // Отправка при нажатии Enter
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && lastQuery) {
+                sendStat('нажал Enter в поиске', lastQuery, '');
+                querySent = true;
+                
+                var firstMatch = document.querySelector('.card[style*="outline"]');
+                if (firstMatch) {
+                    closeSearchClean();
+                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    }
+
+    // Закрытие без повторной отправки
+    function closeSearchClean() {
+        searchOverlay.classList.remove('search-overlay--open');
+        suggestionsBox.style.display = 'none';
+        suggestionsBox.innerHTML = '';
+        document.querySelectorAll('.card').forEach(function(c) {
+            c.style.outline = '';
+            c.style.boxShadow = '';
+        });
+        lastQuery = '';
+        querySent = false;
+    }
+});
+</script>
+
 </body>
 </html>
