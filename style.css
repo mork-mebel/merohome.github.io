@@ -130,7 +130,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     letter-spacing: 3px;
     margin-bottom: 20px;
     color: #b1a296;
-}
+    }
 
 .hero__title {
     font-size: 36px;
@@ -247,6 +247,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     display: none;
 }
 
+.hero__stats { display: flex; gap: 40px; margin-top: 30px; margin-bottom: 20px; }
+.hero__stat-num { font-size: 32px; font-weight: 700; color: #b1a296; display: block; }
+.hero__stat-label { font-size: 13px; color: #5f6368; }
+
 /* Каталог */
 .catalog { padding: 80px 0; }
 .catalog__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; padding-bottom: 10px; }
@@ -262,7 +266,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
 .card__info h3 { font-size: 20px; margin-bottom: 5px; }
 .card__info p { font-size: 14px; color: var(--text-light); }
 .card__price { display: inline-block; margin: 10px 20px; padding: 10px 18px; background: var(--gold); color: #fff; font-weight: 700; font-size: 18px; border-radius: 20px; }
-.card .btn { margin: 0 20px 20px; width: calc(100% - 40px); }
+.card .btn { margin: 0 20px 20px; width: calc(100% - 40px); position: sticky; bottom: 10px;}
 
 /* О нас */
 .about {
@@ -838,16 +842,57 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     stroke: #d4b98c;
 }
 
+/* Блок комплекта */
+.bundle {
+    background: linear-gradient(135deg, #fdf9f7 0%, #f0ebe6 100%);
+    border: 2px solid #b1a296;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto 0;
+}
+.bundle h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+.bundle p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #5f6368;
+}
+.bundle strong {
+    color: #b1a296;
+    font-size: 22px;
+}
+
+/* CTA перед футером */
+.cta-footer {
+    background: #2e3d50;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
+.cta-footer h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.cta-footer p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
 /* ============================================================
    МОБИЛЬНАЯ АДАПТАЦИЯ (телефоны до 768px)
    ============================================================ */
 @media (max-width: 768px) {
-        /* Хедер */
-   @media (max-width: 768px) {
+    /* Хедер */
     .header__phone {
         display: none;
     }
- .burger {
+    .burger {
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -872,7 +917,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
         padding: 15px;
         gap: 10px;
     }
-       .nav--open {
+    .nav--open {
         display: flex !important;
         flex-direction: column;
         position: absolute;
@@ -888,11 +933,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
         color: #fff;
         font-size: 18px;
     }
+
     /* Главный экран */
     .hero {
         background-size: 110% auto;
         background-position: center 60%;
-        padding: 20px 0 300px; 
+        padding: 20px 0 300px;
         min-height: auto;
     }
     .hero__inner {
@@ -920,35 +966,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
         width: 100%;
         border-radius: 15px 15px 0 0;
     }
-        .hero__action-hint {
-        color: #1a1a1a;
-        text-shadow: 0 1px 2px rgba(255,255,255,0.8);
-        font-size: 12px;
+    .hero__action-hint {
         display: none;
     }
-        .hero__link {
-        color: #1a1a1a;
-        text-shadow: 0 1px 2px rgba(255,255,255,0.8);
-        border-bottom: none;
-        flex-direction: column !important;
-        align-items: flex-start;
-        gap: 5px;
-        display: none !important;
-    }
-    .hero__link-divider {
-        display: none !important;
-    }
-        .hero__links {
-        display: flex;
-        flex-direction: column !important;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    .hero__links a {
-        display: block;
-        width: 100%;
-    }
-    .hero__link-divider {
+    .hero__links {
         display: none !important;
     }
 
@@ -994,7 +1015,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
 
     /* Каталог */
     .catalog {
-        padding-top: 0px;
+        padding-top: 0;
     }
     .catalog__scroll {
         overflow-x: visible;
@@ -1040,9 +1061,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     }
     .container {
         padding: 0 15px;
-    }
-    .nav {
-        display: none;
     }
 
     /* Корзина */
