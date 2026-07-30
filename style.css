@@ -125,8 +125,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
     padding-top: 10;
     max-width: 700px;
 }
-
 .hero__slogan {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
     color: #b1a296;
 }
 
