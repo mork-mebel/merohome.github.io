@@ -8,6 +8,8 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪑</text></svg>">
 </head>
 <body>
+    <!-- Прогресс-бар -->
+    <div class="progress-bar" id="progressBar"></div>
 
     <!-- Шапка -->
 <header class="header" id="header">
@@ -66,6 +68,11 @@
                     <span class="hero__badge">покрыто лаком</span>
                 </div>
             </div>
+            <div class="hero__stats">
+    <div class="stat"><span>200+</span> проектов</div>
+    <div class="stat"><span>4.9</span> рейтинг</div>
+    <div class="stat"><span>7 дней</span> срок</div>
+</div>
         </div>
     </section>
 
@@ -848,6 +855,14 @@
     <script>
         document.getElementById('burger').addEventListener('click', () => {
             document.getElementById('nav').classList.toggle('nav--open');
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
         });
     </script>
 </body>
