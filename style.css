@@ -1031,10 +1031,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helv
         max-width: 100%;
     }
     .hero__title {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
     color: #1a1a1a;
     text-shadow: 0 2px 8px rgba(255,255,255,0.8);
+     margin-bottom: 0
+    }
+    .hero__title--accent {
+    font-size: 32px;
+    }
+    .hero__slogan {
+    font-size: 12px; 
     }
     .hero__subtitle {
         font-size: 12px;
